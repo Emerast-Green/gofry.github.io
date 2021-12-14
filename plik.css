@@ -1,0 +1,35 @@
+h1,h2 {
+  color: White;
+  text-align: center;  
+}
+
+p, li {
+    font-size: 18px;
+}
+
+.contain {
+    width: max-content;
+    margin:auto;
+    height: 100px;
+    border-style:inset;
+    width: max-content;
+	background-image: transparent;
+	opacity: 1.5;
+    height:auto;
+}
+
+.contain > * {
+    display: inline-block;
+    height: auto;
+    color: white;
+    text-align: center;
+}
+
+
+#subtitle {
+    text-align: center;
+}
+
+body {
+    background-image: url("https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fs-media-cache-ak0.pinimg.com%2F736x%2Fa6%2F4d%2F95%2Fa64d9527afd3bef72cbfd21520e98040.jpg&f=1&nofb=1");
+}

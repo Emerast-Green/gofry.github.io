@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <link rel="stylesheet" href="plik.css">
+        <title>Gofry</title>
+        <link rel="icon" href="icon.png">
+    </head>
+    <script>
+        var page = 0; // Aktualna strona
+        function move_left(){ // Zmiana w lewo - page-
+            if (page>0){page=page-1};
+            update();
+        }
+        function update(){ // Zminana stanu
+            if (page==3){document.getElementById("c1").textContent="Norwedzy";document.getElementById("c2").textContent="Norwedzy podają gofry na słono, z niebieskim serem.";document.getElementById("c3").textContent="";};
+            if (page==2){document.getElementById("c1").textContent="Wietnam";document.getElementById("c2").textContent="W Wietnamie gofry są posiłkiem ulicznym,";document.getElementById("c3").textContent="przygotowywanym z mlekiem kokosowym i aromatem z pandanowca.";};
+            if (page==0){document.getElementById("c1").textContent="Gofry Niemieckie";document.getElementById("c2").textContent="W XVII-wiecznych Niemczech modyfikować przepis, wzbogacali go o ";document.getElementById("c3").textContent="kawę, kardamon, duże ilości cukru oraz gałkę muszkoatołową.";};
+            if (page==1){document.getElementById("c1").textContent="Gofry Francuskie";document.getElementById("c2").textContent="Francuzi wzbogacili przepis o jajka, skórkę cytryny, wino i goździki.";document.getElementById("c3").textContent="";};
+        };
+        function move_right(){ // Zmiana w prawo - page+
+            if (page<3){page=page+1};
+            update();
+        }
+    </script>
+    <body>
+        <h1>GOFRY</h1>
+        <h2 id="subtitle">Historia</h2>
+        <div class="contain" width="10p" id="substitute_width1">
+            <p>
+            Starożytni Grecy przygotowując obelios, pierwowzór znanych dziś gofrów, umieszczali ciasto pomiędzy dwoma gorącymi metalowymi talerzami. <br>
+            Pierwszy znany przepis na gofry pochodzi z końca XIV wieku i został odnaleziony w anonimowym rękopisie, <br> 
+            mowa w nim o składnikach takich jak: jajka, sól, wino, mąka oraz olej. <br>
+            </p>
+        </div>
+        <h2 id="subtitle">Gofry wokół Świata</h2>
+        <div class="contain" style="border-style:none;">
+            <div class="contain" style="position:absolute;display:inline-table;border-style:none;" id="substitute_width3">
+                <div onclick=move_left() style="height: 200px;margin-top:0px;" id="s1"></div>
+                <div onclick=move_right() style="height: 200px;margin-top:0px;" id="s2"></div>
+            </div>
+            <div style="display:inline-table;text-align: center;height:200px;" class="contain" id="substitute_width2">
+                <div style="width:600px;height:200px;margin-top:0px;" id="b1"><p id="c1"></p><p id="c2"></p><p id="c3"></p></div>
+            </div>
+        </div>
+        <h2 id="subtitle">Przykładowy przepis</h2>
+        </div>
+        <div class="contain" id="share_width">
+            <div>
+                <div  style="position:absolute;display:inline-table;border-style:none;">
+                    <img style="width:300px;height:auto" src="https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Ftse1.mm.bing.net%2Fth%3Fid%3DOIP.XAn3P1tCYGRMArAtmvKlcwHaE8%26pid%3DApi&f=1">
+                </div>
+                <ul style="text-align:left;width:max-content">
+                    <li>2 szklanki mąki pszennej</li>
+                    <li>2 szklanki mleka</li>
+                    <li>1 łyżeczka proszku do pieczenia</li>
+                    <li>szczypta soli</li>
+                    <li>1 - 2 łyżki drobnego cukru do wypieków</li>
+                    <li>1/3 szklanki (80 ml) oleju słonecznikowego</li>
+                    <li>2 jajka (żółtka oddzielone od białek)</li>
+                </ul>
+                <ol type=1 style="text-align:left;width:max-content">
+                    <li>Gofrownicę rozgrzać do wymaganej temperatury.</li>
+                    <li style="width:60%;">W większym naczyniu zmiksować mąkę, mleko, proszek do pieczenia, sól, cukier, olej i żółtka (np. blenderem).</li> 
+                    <li>Białka ubić na sztywną pianę i bardzo delikatnie wymieszać z ciastem.</li>
+                    <li>Porcję ciasta przelać do rozgrzanej gofrownicy i piec przez około 2 – 3 minuty, do rumianego koloru i chrupkości.</li>
+                    <li>Studzić na kratce. Podawać z bitą śmietaną lub z ulubionymi dodatkami.</li>
+                </ol>
+            </div>
+            <div style="vertical-align:top;width:auto;">
+
+            </div>
+        </div>
+    </body>
+    <script>
+        update();
+        document.getElementById("substitute_width1").style.width=document.getElementById("share_width").clientWidth.toString()+"px";
+        document.getElementById("substitute_width2").style.width=document.getElementById("share_width").clientWidth.toString()+"px";
+        document.getElementById("substitute_width3").style.width=document.getElementById("share_width").clientWidth.toString()+"px";
+        document.getElementById("substitute_width1").style.textAlign="center";
+        document.getElementById("s1").style.width=(document.getElementById("share_width").clientWidth/2).toString()+"px";
+        document.getElementById("s2").style.width=(document.getElementById("share_width").clientWidth/2).toString()+"px";
+        //document.getElementById("substitute_width2").style.textAlign="center";
+       // document.getElementById("substitute_width2").style.height="200px";
+    </script> <!--domyślna konfiguracja-->
+</html>
